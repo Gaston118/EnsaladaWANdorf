@@ -105,7 +105,30 @@ En los puntos medios de cada período de bit, por que ahi ya es estable la seña
 
 ### 3)
 
+<img width="981" height="364" alt="image" src="https://github.com/user-attachments/assets/aa7c6fea-5256-4836-b154-6f2b3ec92d30" />
 
+**a)** La tecnica es BPSK (Binary Phase Shift Keying). 
+
+**b)**
+
+**c)** 
+
+- Modulación por Amplitud (ASK - Amplitude Shift Keying)
+- Modulación por Fase (PSK - Phase Shift Keying)
+- Modulación por Frecuencia (FSK - Frequency Shift Keying)
+- Modulación por Ancho de Pulso
+
+**d)**
+El BER (Bit Error Rate) es una métrica que mide la calidad de una transmisión digital. Se define como:
+
+```BER = Número de bits erróneos / Número total de bits transmitidos```
+
+Creemos que la tecnica que tiene mejores prestaciones a nivel de BER es BPSK
+
+- Menor BER para un SNR dado
+- Máxima separación entre símbolos (180°)
+- Más resistente al ruido
+- Solo transmite 1 bit/símbolo
 
 
 ## Referencias 
