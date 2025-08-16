@@ -80,8 +80,33 @@ Como afecta el fenomeno descrito anteriormente:
 - Telefonia celular: En este caso afecta mucho, ya que las ondas pierden intesidad con obstaculos y distancia, lo que limita la cobertura y su velocidad.
 - Cable coaxial: En el cable afecta, pero a un menor nivel, ya que al ser un medio guiado no sufre como el de telefonia celular, pero el coaxial presenta perdidas resistivas y dielectricas, por lo que se necesita de amplificadores o repetidores.
 - Fibra optica: En el ultimo caso, afecta pero mucho menos que en los anteriores, ya que es muy baja la atenuacion que se pierde por dispersion en el vidrio.
+
+---
  
 ### 2)
+
+<img width="969" height="332" alt="image" src="https://github.com/user-attachments/assets/6bfe6c05-05fe-4f41-9aa6-845d9f4b2ca2" />
+
+**a)** 
+El clock que utilizan ambos modulos es el mismo, y la transmision es en un solo sentido, por lo tanto es una transmision simple sincronica. 
+
+**b)**
+El esquema de la figura es muy bueno para velocidad pero es en un solo sentido. Si se busca rapidez y bidireccionalidad, no es suficiente.
+
+**c)**
+``` A = D'65 = B'01000001```
+
+<img width="963" height="276" alt="Diagrama sin título drawio (3)" src="https://github.com/user-attachments/assets/0f08c6ed-9bac-463e-8659-ff5a9f532aa5" />
+
+**d)**
+En los puntos medios de cada período de bit, por que ahi ya es estable la señal.
+
+---
+
+### 3)
+
+
+
 
 ## Referencias 
 
