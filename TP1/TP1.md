@@ -61,9 +61,27 @@ Una señal analógica/continua será denotada por f(t), una función del tiempo,
        F = c / lambda = 3x10^8 / 0.06 = 5 [GHz]
 
  **c)** 
+En este caso, dada la frecuencia obtenida, podemos ver que la onda se encuentra en el espectro conocido como "microondas", especificamente dentro de la region de las Frecuencias Superaltas (SHF) que van en el rango de 3GHz hasta 30GHz. Si hacemos un analisis mas profundo vemos que la onda se encuentra en la banda tipo "C", que va desde los 4GHz hasta los 8GHz. Este fue el primer rango de frecuencia utilizado en operación transmisiones satelitales. Normalmente se usa polarización horizontal y vertical.
 
+**d)**
+Dispositivos y sistemas típicos que operan en banda C:
+- Enlaces satelitales
+- Sistemas de radar
+- Enlaces para estaciones base 5G
+
+**e)**
+La linea de trazos roja en la figura representa la atenuacion de la onda a medida que se propaga en el tiempo. Se puede ver como la onda electromagnetica disminuye su amplitud con la distancia. Esto se puede deber por muchos factores, como perdidas por absorcion o como propagacion en el medio.
+
+**f)**
+El efecto mencionado en el punto "e", se puede ver reflejado integramente en el ejemplo mencionado de "Enlaces para estaciones base 5G". Esto puede verse como en el dia a dia hay zonas en la ciudad, por ejemplo Cordoba, que si te alejas del centro el rango de 5G se ve afectado y otro rango como 4G, ya sea por alguno de los factores mencionados anteriormente.
+
+**g)**
+Como afecta el fenomeno descrito anteriormente:
+- Telefonia celular: En este caso afecta mucho, ya que las ondas pierden intesidad con obstaculos y distancia, lo que limita la cobertura y su velocidad.
+- Cable coaxial: En el cable afecta, pero a un menor nivel, ya que al ser un medio guiado no sufre como el de telefonia celular, pero el coaxial presenta perdidas resistivas y dielectricas, por lo que se necesita de amplificadores o repetidores.
+- Fibra optica: En el ultimo caso, afecta pero mucho menos que en los anteriores, ya que es muy baja la atenuacion que se pierde por dispersion en el vidrio.
  
-
+### 2)
 
 ## Referencias 
 
@@ -72,5 +90,7 @@ Una señal analógica/continua será denotada por f(t), una función del tiempo,
 - https://biblioteca.utb.edu.co/notas/tesis/0062312.pdf
 - https://es.khanacademy.org/science/ap-chemistry/electronic-structure-of-atoms-ap/bohr-model-hydrogen-ap/a/light-and-the-electromagnetic-spectrum
 - https://catedras.facet.unt.edu.ar/pds/wp-content/uploads/sites/125/2017/04/Se%C3%B1ales-y-Sistemas-de-Tiempo-Discreto_Fundamentos.pdf
+- https://es.wikipedia.org/wiki/Espectro_electromagn%C3%A9tico
+- 
 
     
