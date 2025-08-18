@@ -1,8 +1,8 @@
 # Trabajo Practico N1
 
 - **Gastón E. Capdevila**
-- **Igancio Ledesma**
 - **Nicolas Seia**
+- **Ignacio Ledesma**
 - **Tomas Viberti**  
  
 ## Ensalada WANdorf
@@ -23,7 +23,7 @@
  
 - gaston.capdevila@mi.unc.edu.ar
 - nicolas.seia@unc.edu.ar
--
+- iledesma@mi.unc.edu.ar
 - 
 
 ## Resumen
@@ -132,15 +132,69 @@ Creemos que la tecnica que tiene mejores prestaciones a nivel de BER es BPSK
 - Más resistente al ruido
 - Solo transmite 1 bit/símbolo
 
+---
 
-## Referencias 
+### 4)
 
-## Bibliografia 
+#### Pruebas de conectividad en una Red Simulada en Packet Tracer
 
-- https://biblioteca.utb.edu.co/notas/tesis/0062312.pdf
-- https://es.khanacademy.org/science/ap-chemistry/electronic-structure-of-atoms-ap/bohr-model-hydrogen-ap/a/light-and-the-electromagnetic-spectrum
-- https://catedras.facet.unt.edu.ar/pds/wp-content/uploads/sites/125/2017/04/Se%C3%B1ales-y-Sistemas-de-Tiempo-Discreto_Fundamentos.pdf
-- https://es.wikipedia.org/wiki/Espectro_electromagn%C3%A9tico
-- 
+Se realizaron pings entre un router, una PC de escritorio (conectada por Ethernet) y dos notebooks (conectadas por Wi-Fi):
+
+<img width="810" height="278" alt="image" src="https://github.com/user-attachments/assets/ec3a38af-fa83-4918-b84d-a1079728fd27" />
+
+* **Dentro de la oficina:**
+
+  * Respuestas correctas.
+  * Latencias entre **10 ms y 41 ms**.
+  * 0% pérdida de paquetes.
+
+<img width="810" height="637" alt="Test office" src="https://github.com/user-attachments/assets/66659d26-e82e-42d0-8f8a-f5411b76125c" />
+<img width="405" height="190" alt="Conexion Oficina" src="https://github.com/user-attachments/assets/6b9dc0f2-414a-4c8f-87c3-f8f0bfd1185e" />
+<img width="405" height="190" alt="Terminal Office" src="https://github.com/user-attachments/assets/c6c47472-155e-47ec-bb4e-822324ba0e72" />
+
+* **En el límite del rango:**
+
+  * Respuestas correctas pero con señal débil.
+  * Latencias entre **10 ms y 24 ms**.
+  * 0% pérdida de paquetes en la prueba, pero el nivel de señal era bajo ($~11%$).
+
+<img width="810" height="637" alt="Test Rango" src="https://github.com/user-attachments/assets/21371720-7e9c-485b-b18d-9194d0e46c1f" />
+<img width="405" height="190" alt="Conexion Rango" src="https://github.com/user-attachments/assets/5a40c34a-941d-4448-ab2e-9e1e21a22494" />
+<img width="405" height="190" alt="Terminal Rango" src="https://github.com/user-attachments/assets/293fd362-4646-4e91-b68d-132c9d8ca453" />
+
+
+* **Fuera del área de cobertura (out of range):**
+
+  * El ping no tuvo respuesta.
+  * **100% pérdida de paquetes.**
+
+<img width="810" height="637" alt="Test Out" src="https://github.com/user-attachments/assets/2ba21458-8bc9-4742-b523-086b8cf16316" />
+<img width="405" height="190" alt="Conexion Out" src="https://github.com/user-attachments/assets/a663115d-ee4a-4c72-9620-fc8f7f8a9d02" />
+<img width="405" height="190" alt="Terminal Out" src="https://github.com/user-attachments/assets/91d4f7a9-1ddb-4dfe-a722-cd98262a1295" />
+
+#### Conclusiones
+
+* La conectividad depende directamente de la distancia al router y, en la práctica, de la interferencia con los obstáculos (paredes, salas).
+* Dentro de la oficina la conexión fue estable, con latencias bajas.
+* Al acercarse al límite de cobertura, la señal cae drásticamente y pueden aparecer pérdidas de paquetes o desconexiones.
+* Esto reproduce el comportamiento real de redes Wi-Fi, donde el rango efectivo es limitado y depende tanto de la potencia del AP como de las interferencias y obstáculos en el medio.
+
+El router genera un **círculo de cobertura** que representa el alcance de la señal Wi-Fi. Dentro de la oficina, la señal es estable. A medida que la notebook se aleja, la señal disminuye (ejemplo: 47% → 11% → desconexión). Al salir de la zona morada, la notebook ya no detecta la red y la conexión se pierde.
+
+## Discusión y Conclusiones
+
+El desarrollo del trabajo permitió conectar la teoría de las comunicaciones digitales con un escenario práctico de simulación. En la primera parte se repasaron conceptos clave como la clasificación de señales, el espectro electromagnético y las técnicas de modulación, resaltando su importancia en la transmisión confiable de datos.
+
+La implementación en Packet Tracer mostró de manera tangible cómo factores físicos como la distancia, la atenuación y los obstáculos afectan la calidad de la comunicación inalámbrica. Se comprobó que dentro de la cobertura la red funciona de manera estable, mientras que en el límite o fuera de rango aparecen pérdidas de paquetes y desconexiones.
+
+En conclusión, el trabajo evidencia la relevancia de comprender tanto la teoría como la práctica: la primera brinda las herramientas conceptuales, y la segunda permite experimentar los efectos reales en un entorno controlado. Este enfoque integral fortalece la formación en comunicaciones de datos y prepara a los estudiantes para escenarios más complejos en redes e infraestructura digital.
+
+## Bibliografia
+
+- [Perna González, A. J. (2010). *Modulación y demodulación en frecuencia (Diseño y construcción de módulos de entrenamiento para FM)*. Universidad Tecnológica de Bolívar.](https://biblioteca.utb.edu.co/notas/tesis/0062312.pdf)
+- [Khan Academy. (s.f.). *Luz y el espectro electromagnético*. Khan Academy.](https://es.khanacademy.org/science/ap-chemistry/electronic-structure-of-atoms-ap/bohr-model-hydrogen-ap/a/light-and-the-electromagnetic-spectrum)
+- [Cátedras FACET UNT. (2017). *Fundamentos de señales y sistemas de tiempo discreto*. Facultad de Ciencias Económicas y Tecnología, Universidad Nacional de Tucumán.](https://catedras.facet.unt.edu.ar/pds/wp-content/uploads/sites/125/2017/04/Se%C3%B1ales-y-Sistemas-de-Tiempo-Discreto_Fundamentos.pdf)
+- [Espectro electromagnético. (s.f.). *Wikipedia*](https://es.wikipedia.org/wiki/Espectro_electromagn%C3%A9tico) (consultado el 18 de agosto de 2025)
+- [Radio Inquiry Unit. (2016). *United States Spectrum Allocation Chart* [Gráfico PDF]. IEEE REACH.](https://reach.ieee.org/wp-content/uploads/2021/07/IEEE_REACH_United-States-Spectrum-Allocation-Chart.pdf)
 
     
