@@ -111,6 +111,8 @@ En los puntos medios de cada período de bit, por que ahi ya es estable la seña
 
 **b)**
 
+<img width="1330" height="354" alt="Diagrama sin título drawio" src="https://github.com/user-attachments/assets/24a253e2-0006-4b46-ad20-e1666f4c699f" />
+
 **c)** 
 
 - Modulación por Amplitud (ASK - Amplitude Shift Keying)
