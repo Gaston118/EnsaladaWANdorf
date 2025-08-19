@@ -178,6 +178,13 @@ Se realizaron pings entre un router, una PC de escritorio (conectada por Etherne
 <img width="810" height="637" alt="Test Out" src="https://github.com/user-attachments/assets/2ba21458-8bc9-4742-b523-086b8cf16316" />
 <img width="405" height="190" alt="Conexion Out" src="https://github.com/user-attachments/assets/a663115d-ee4a-4c72-9620-fc8f7f8a9d02" />
 <img width="405" height="190" alt="Terminal Out" src="https://github.com/user-attachments/assets/91d4f7a9-1ddb-4dfe-a722-cd98262a1295" />
+#### c) Caracteristicas de la Conexión
+
+Ya configurado el router en conjunto con la red y los dispositivos,
+
+- *¿En qué frecuencia opera?:* al entrar en la configuración del router en Packet Tracer, se observa que el dispositivo trabaja en el *canal 1, con **frecuencia 2.412 GHz*
+- *¿A qué region del especto electromagnético corresponde?:* esta frecuencia se encuentra dentro de la banda de 2.4GHz, que la ITU (International Telecommunication Union) clasifica dentro de la región de *microondas del espectro electromagnético*.
+- *¿En qué banda opera?:* corresponde a la banda *ISM (Industrial, Scientific and Medical)*, la cual abarca de 2.400 GHz a 2.4835 GHz y es la que se utiliza de forma libre (sin licencia) para tecnología Wi-Fi, Bluetooth y microondas domésticos.
 
 #### Conclusiones
 
