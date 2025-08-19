@@ -24,11 +24,18 @@
 - gaston.capdevila@mi.unc.edu.ar
 - nicolas.seia@unc.edu.ar
 - iledesma@mi.unc.edu.ar
-- 
+- tomas.viberti@mi.unc.edu.ar
 
 ## Resumen
 
+Este trabajo práctico tiene como objetivo repasar los fundamentos esenciales de comunicaciones digitales, explorar la relación entre la capa física y la transmisión de datos, y aplicar estos conceptos en un entorno de simulación utilizando Cisco Packet Tracer. Se abordan temas como ondas electromagnéticas, modulación/demodulación, y señales discretas y continuas. Finalmente, se construye y analiza una red simple para observar fenómenos prácticos de conectividad, cobertura y atenuación de señal en un escenario realista.
+
+
+*Palabras clave*: comunicaciones digitales, ondas electromagnéticas, modulación, capa física, Packet Tracer
+
 ## Introducción
+
+Las comunicaciones digitales constituyen la base de la transmisión de información en la actualidad. Desde la propagación de ondas electromagnéticas hasta la representación binaria de datos, los conceptos teóricos se combinan con tecnologías de red para permitir conexiones locales y globales. Este trabajo práctico busca reforzar los conocimientos adquiridos en la asignatura mediante una aproximación teórico-práctica: por un lado, repasando nociones fundamentales como espectro electromagnético, señales discretas y técnicas de modulación; y por otro, implementando una red en Cisco Packet Tracer para observar fenómenos de cobertura inalámbrica, asignación de direcciones IP y conectividad entre dispositivos.
 
 ## Desarrollo 
 
