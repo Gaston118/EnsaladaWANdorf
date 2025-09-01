@@ -181,7 +181,7 @@ b4 2e 99 ca ff bc   → **Dirección MAC origen**
 
 45 00 00 3c d4 1e 00 00 80 01 db b4 c0 a8 00 8a c0 a8 00 a8 Encabezado → **Encabezado IPv4**
 
-08 00 4d 43 00 01 00 01 → **Encabezado ICMP**
+00 01 08 00 4d 43 00 01 00 → **Encabezado ICMP**
 
 ### d) 
 
@@ -207,6 +207,7 @@ Esta página muestra todos los bloques de direcciones MAC registrados por Sagemc
 - https://www.smar.com.br/es/articulo-tecnico/emi-interferencia-electromagnetica-en-instalaciones-industriales-y-mucho-mas
 - https://hardzone.es/reportajes/que-es/relacion-senal-ruido-snr-audio/
 - https://www.ionos.es/digitalguide/servidores/know-how/trama-ethernet/
+
 
 
 
