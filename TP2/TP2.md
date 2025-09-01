@@ -152,6 +152,52 @@ En general, un cable cruzado se utiliza para conectar dos dispositivos del mismo
 - Relación con lo visto en el punto 2:
 Los pares trenzados permiten que las señales se transporten de manera más limpia, mejorando el SNR y reduciendo el impacto del ruido.
 
+#### c)
+
+### Captura de paquetes Ethernet con Wireshark
+
+Una manera sencilla de capturar un paquete, es mediante la ejecución del comando ping hacia la puerta de enlace de red.
+Tal como indica la figura, si se ejecuta el comando ipconfig en una terminal de comandos puede obtenerse la dirección IP del dispositivo actual, y la dirección IP de la puerta de enlace predeterminada.
+
+<img width="566" height="126" alt="image" src="https://github.com/user-attachments/assets/95ce7513-0f5a-4617-aa9e-63cd469699b7" />
+
+Se inicia la captura de paquetes en Wireshark y se ejecuta el comando ping hacia la dirección IP de la puerta de enlace. En la lista de paquetes capturados, es posible detectar los paquetes ICMP generados por el comando ping.
+
+<img width="1061" height="189" alt="image" src="https://github.com/user-attachments/assets/efcefeb8-dcc2-4306-9cad-1dda246cb76a" />
+
+El paquete enviado en este caso es:
+
+7c 16 89 b9 29 41 b4 2e 99 ca ff bc 08 00 45 00  
+00 3c dd 1e 00 00 80 01 db b4 c0 a8 00 9c c0 a8   
+00 01 08 00 4d 43 00 01 00 18 61 62 63 64 65 66   
+67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76   
+77 61 62 63 64 65 66 67 68 69                     
+
+7c 16 89 b9 29 41   → **Dirección MAC destino**
+
+b4 2e 99 ca ff bc   → **Dirección MAC origen**
+
+08 00               → **Tipo de protocolo (0x0800 = IPv4)**
+
+45 00 00 3c d4 1e 00 00 80 01 db b4 c0 a8 00 8a c0 a8 00 a8 Encabezado → **Encabezado IPv4**
+
+08 00 4d 43 00 01 00 01 → **Encabezado ICMP**
+
+### d) 
+
+Por medio del sitio https://macaddress.io/ puede obtenerse información extra sobre está dirección MAC, tal como los datos del fabricante y su dirección.
+
+**7c 16 89 b9 29 41 MAC address details**
+- Company name: Sagemcom Broadband Sas
+- Company address: 250, route de l'Empereur Rueil Malmaison Cedex hauts de seine 92848 FR
+- Country code: FR
+- 195 OUIs registered
+
+Esta página muestra todos los bloques de direcciones MAC registrados por Sagemcom Broadband Sas. Cada vez que una empresa registra un rango, debe indicar "Dirección de la empresa". En la mayoría de los casos, estas direcciones se escriben de forma diferente, por lo que mostramos la dirección de cada bloque MAC por separado.
+
+<img width="1161" height="701" alt="image" src="https://github.com/user-attachments/assets/7c268817-f443-46fa-9a70-a4544b531a75" />
+
+
 ## Discusión y Conclusiones
 
 
@@ -161,5 +207,6 @@ Los pares trenzados permiten que las señales se transporten de manera más limp
 - https://www.smar.com.br/es/articulo-tecnico/emi-interferencia-electromagnetica-en-instalaciones-industriales-y-mucho-mas
 - https://hardzone.es/reportajes/que-es/relacion-senal-ruido-snr-audio/
 - https://www.ionos.es/digitalguide/servidores/know-how/trama-ethernet/
+
 
 
