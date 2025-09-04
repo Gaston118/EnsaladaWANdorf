@@ -74,10 +74,13 @@ La figura muestra el fenómeno de ruido e interferencia en una señal electromag
   - Provoca que la señal original no llegue de manera limpia, lo cual es un problema a la hora de recuperar la información.
  
 #### b)
-Con respecto a las transmisiones mas afectadas tenemos aquellas que su medio es el espacio o el aire, como el Wi-Fi, enlaces satelitales, radio y TV por aire, telefonía celular entre otros. Al estar expuestas al ruido e interferencias electromagneticas.
+Con respecto a las transmisiones mas afectadas tenemos aquellas que su medio es el espacio o el aire, como el Wi-Fi, enlaces satelitales, radio y TV por aire, telefonía celular entre otros. Al estar expuestas al ruido e interferencias electromagneticas. De estas, las señales más susceptibles son son aquellas que operan en **bandas de alta frecuencia (HF, del orden de GHz, como 5 GHz en Wi-Fi o satélites de 1–50 GHz)**, ya que son más sensibles a obstáculos y condiciones atmosféricas.  
 
-Por otro lado, las mas resilientes son la que su medio de transmision no estan expuestos al medio abierto, como por ejemplo transmisiones por fibra óptica o cable coaxial. La primera es en un canal completamente guiado por el vidrio, inmune al ruido, 
-mientras que el otro, esta más protegido que el aire, pero presenta pérdidas resistivas.
+Por otro lado, las transmisiones más resilientes suelen ser:  
+
+- **Bandas de frecuencia baja (LF, MF)**: menos afectadas por el entorno, ya que atraviesan mejor los obstáculos.  
+- **Técnicas de modulación como LoRa**: diseñadas específicamente para ser robustas frente a interferencias y ruido.  
+- **Fibra óptica y coaxial**: al ser medios guiados, minimizan la exposición al ruido electromagnético externo. La primera es en un canal completamente guiado por el vidrio, inmune al ruido, mientras que el otro, esta más protegido que el aire, pero presenta pérdidas resistivas. Son las mas resilientos porque su medio de transmision no esta expuesto al medio abierto. 
 
 #### c)
 La SNR (Signal to Noise Ratio) se define como la proporción existente entre la potencia de salida de la señal que se transmite y la potencia del ruido que la corrompe. Se mide normalmente en decibelios (dB). Un SNR alto indica una señal clara respecto al ruido.
@@ -93,17 +96,24 @@ SNR = Pseñal / Pruido o en dB: 10log10(Pseñal / Pruido)
 ### 3)
 #### a)
 
-Ethernet es la tecnología tradicional para conectar dispositivos en una red de área local (LAN) o una red de área amplia (WAN) por cable, lo que les permite comunicarse entre sí a través de un protocolo: un conjunto de reglas o lenguaje de red común.
+Ethernet es la tecnología tradicional para conectar dispositivos en una red de área local (LAN) o una red de área amplia (WAN) por cable. Se basa en la transmisión de tramas con una estructura definida y ciertas características clave:
 
-- Caracteristicas principales:
-  - Costo relativamente bajo.
-  - Generalmente resistente al ruido.
-  - Velocidad y fiabilidad.
-  - Seguridad de los datos.
+- **Topología estrella**: cada dispositivo se conecta a un switch o hub central.  
+- **Acceso al medio mediante CSMA/CD** (Carrier Sense Multiple Access with Collision Detection): los dispositivos “escuchan” el medio antes de transmitir y, si ocurre una colisión, reintentan luego de un tiempo aleatorio.  
+- **Duplex**: las primeras implementaciones soportaban half-duplex (transmisión en un sentido por vez), mientras que Ethernet actuales operan principalmente en full-duplex (transmisión y recepción simultánea).  
+- **Evolución de velocidades**:  
+  - Ethernet: 10 Mbps, primer estándar sobre cable UTP.  
+  - Fast Ethernet: 100 Mbps, mejora de velocidad manteniendo compatibilidad con cableado UTP.  
+  - Gigabit Ethernet: 1 Gbps, usa las 4 parejas de cable UTP y es full-duplex por defecto. Mayor eficiencia y soporte para grandes volumenes de datos.
+
+Algunas ventajas de la tecnología Ethernet son:
+
+- Costo relativamente bajo.
+- Generalmente resistente al ruido.
+- Velocidad y fiabilidad.
+- Seguridad de los datos.
  
-Una trama en Ethernet es la unidad básica de transmisión de datos en una red Ethernet. Es un bloque de información con una estructura definida que permite identificar el origen, el destino, el tipo de datos transportados y verificar si hubo errores en la transmisión.
-
-- Bloque de tramas Ethernet:
+Una trama en Ethernet es la unidad básica de transmisión de datos en una red Ethernet. Es un bloque de información con una estructura definida que permite identificar el origen, el destino, el tipo de datos transportados y verificar si hubo errores en la transmisión. A continuación se explica brevemente la función de cada uno de los bloques de tramas Ethernet:
   
 | Building block                       | Tamaño                               | Función                                                                                       |
 |--------------------------------------|--------------------------------------|-----------------------------------------------------------------------------------------------|
@@ -120,10 +130,6 @@ Una trama en Ethernet es la unidad básica de transmisión de datos en una red E
 | Data                                 | 44–1500 bytes (según la estructura)  | Los datos que deben transmitirse                                                              |
 | Frame check sequence (FCS)           | 4 bytes                              | Suma de comprobación que calcula la trama completa                                            |
 | Inter frame gap (IFS)                | –                                    | Parada de transmisión de 9,6 µs                                                               |
-
-- Ethernet: 10 Mbps, primer estandar sobre cale UTP.
-- Fast Ethernet: 100 Mbps, mejora en velocidad, mantiene compatibilidad con cableado UTP.
-- Gigabit Ethernet: 1 Gbps, usa todas las parejas de cable UTP, mayor eficiencia y soporte para grandes volumenes de datos.
 
 #### b)
 
@@ -152,9 +158,7 @@ En general, un cable cruzado se utiliza para conectar dos dispositivos del mismo
 - Relación con lo visto en el punto 2:
 Los pares trenzados permiten que las señales se transporten de manera más limpia, mejorando el SNR y reduciendo el impacto del ruido.
 
-#### c)
-
-### Captura de paquetes Ethernet con Wireshark
+#### c) Captura de paquetes Ethernet con Wireshark
 
 Una manera sencilla de capturar un paquete, es mediante la ejecución del comando ping hacia la puerta de enlace de red.
 Tal como indica la figura, si se ejecuta el comando ipconfig en una terminal de comandos puede obtenerse la dirección IP del dispositivo actual, y la dirección IP de la puerta de enlace predeterminada.
@@ -167,30 +171,59 @@ Se inicia la captura de paquetes en Wireshark y se ejecuta el comando ping hacia
 
 El paquete enviado en este caso es:
 
+```
 7c 16 89 b9 29 41 b4 2e 99 ca ff bc 08 00 45 00  
 00 3c dd 1e 00 00 80 01 db b4 c0 a8 00 9c c0 a8   
-00 01 08 00 4d 43 00 01 00 18 61 62 63 64 65 66   
+00 00 08 00 4d 43 00 01 00 18 61 62 63 64 65 66   
 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76   
 77 61 62 63 64 65 66 67 68 69                     
+```
 
-7c 16 89 b9 29 41   → **Dirección MAC destino**
+A continuación, se hace un análisis de la trama enviada:
 
-b4 2e 99 ca ff bc   → **Dirección MAC origen**
+##### *Encabezado Ethernet*
 
-08 00               → **Tipo de protocolo (0x0800 = IPv4)**
+* Son los primeros 14 bytes de la trama → `7c 16 89 b9 29 41 b4 2e 99 ca ff bc 08 00`
+  * `7c 16 89 b9 29 41`   → **Dirección MAC destino**
+  * `b4 2e 99 ca ff bc`   → **Dirección MAC origen**
+  * `08 00`               → **Tipo de protocolo (0x0800 indica que el protocolo utilizado por la capa superior es IPv4)**
 
-45 00 00 3c d4 1e 00 00 80 01 db b4 c0 a8 00 8a c0 a8 00 a8 Encabezado → **Encabezado IPv4**
+##### *Encabezado IP*
 
-00 01 08 00 4d 43 00 01 00 → **Encabezado ICMP**
+* Son 20 bytes en total → `45 00 00 3c dd 1e 00 00 80 01 db b4 c0 a8 00 9c c0 a8 00 01`
+  * `4` → Protocolo IPv4
+  * `5` → Longitud en múltiplos de 4 bytes
+  * `00` → Quality of Service
+  * `00 3c` → Longitud Total, de tal forma que el encabezado IP + mensaje ocupan 60 bytes
+  * `dd 1e` → Identificación del Paquete
+  * `00 00` → Flags y Offset
+  * `80` → TTL = 80, lo que indica que el paquete puede atravesar maximo 128 routers
+  * `01` → Protocolo Auxiliar, en este caso ICMP
+  * `db b4` → Checksum para verificar la integridad del encabezado
+  * `c0 a8 00 9c` → **Dirección IP destino**
+  * `c0 a8 00 01` → **Dirección IP origen**
 
-### d) 
+##### *Encabezado ICMP*
+
+* Son 8 bytes en total → `00 00 4d 43 00 01`
+  * `00` → Tipo 0 (Echo Reply, respuesta a un ping)  
+  * `00` → Código 0 (sin subcódigo adicional)  
+  * `4d 43` → Checksum de 16 bits para verificar la integridad del encabezado  
+  * `00 01` → Número de secuencia (se incrementa con cada solicitud/respuesta)  
+
+##### *Datos ICMP*
+
+* El resto de bytes son bytes que se envían como parte del paquete ICMP sin tener un propósito especifico mas alla de ser devueltos exactamente como se enviaron en un Echo Request, lo que permite verificar la integridad de la conexión
+
+#### d) 
 
 Por medio del sitio https://macaddress.io/ puede obtenerse información extra sobre está dirección MAC, tal como los datos del fabricante y su dirección.
 
-**7c 16 89 b9 29 41 MAC address details**
+##### **7c 16 89 b9 29 41 MAC address details**
+
 - Company name: Sagemcom Broadband Sas
 - Company address: 250, route de l'Empereur Rueil Malmaison Cedex hauts de seine 92848 FR
-- Country code: FR
+- Country code: FR (Francia)
 - 195 OUIs registered
 
 Esta página muestra todos los bloques de direcciones MAC registrados por Sagemcom Broadband Sas. Cada vez que una empresa registra un rango, debe indicar "Dirección de la empresa". En la mayoría de los casos, estas direcciones se escriben de forma diferente, por lo que mostramos la dirección de cada bloque MAC por separado.
@@ -207,6 +240,7 @@ Esta página muestra todos los bloques de direcciones MAC registrados por Sagemc
 - https://www.smar.com.br/es/articulo-tecnico/emi-interferencia-electromagnetica-en-instalaciones-industriales-y-mucho-mas
 - https://hardzone.es/reportajes/que-es/relacion-senal-ruido-snr-audio/
 - https://www.ionos.es/digitalguide/servidores/know-how/trama-ethernet/
+
 
 
 
