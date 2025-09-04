@@ -28,11 +28,7 @@
 
 ## Resumen
 
-
-
-
 ## Introducción
-
 
 ## Desarrollo 
 
@@ -80,7 +76,7 @@ Por otro lado, las transmisiones más resilientes suelen ser:
 
 - **Bandas de frecuencia baja (LF, MF)**: menos afectadas por el entorno, ya que atraviesan mejor los obstáculos.  
 - **Técnicas de modulación como LoRa**: diseñadas específicamente para ser robustas frente a interferencias y ruido.  
-- **Fibra óptica y coaxial**: al ser medios guiados, minimizan la exposición al ruido electromagnético externo. La primera es en un canal completamente guiado por el vidrio, inmune al ruido, mientras que el otro, esta más protegido que el aire, pero presenta pérdidas resistivas. Son las mas resilientos porque su medio de transmision no esta expuesto al medio abierto. 
+- **Fibra óptica y coaxial**: al ser medios guiados, minimizan la exposición al ruido electromagnético externo. La primera es en un canal completamente guiado por el vidrio, inmune al ruido, mientras que el otro, esta más protegido que el aire, pero presenta pérdidas resistivas. Son las mas resilientes porque su medio de transmision no esta expuesto al medio abierto. 
 
 #### c)
 La SNR (Signal to Noise Ratio) se define como la proporción existente entre la potencia de salida de la señal que se transmite y la potencia del ruido que la corrompe. Se mide normalmente en decibelios (dB). Un SNR alto indica una señal clara respecto al ruido.
@@ -117,19 +113,19 @@ Una trama en Ethernet es la unidad básica de transmisión de datos en una red E
   
 | Building block                       | Tamaño                               | Función                                                                                       |
 |--------------------------------------|--------------------------------------|-----------------------------------------------------------------------------------------------|
-| Preamble / Start frame delimiter (SFD) | 8 bytes                              | Sincronización de los receptores. Secuencia de bits que inicia la trama                        |
+| Preamble / Start frame delimiter (SFD) | 8 bytes                              | Sincronización de los receptores. Secuencia de bits que inidican el inicio de la trama                        |
 | Destination address (MAC)            | 6 bytes                              | Dirección de hardware del adaptador de red de destino                                         |
 | Source address (MAC)                 | 6 bytes                              | Dirección de hardware del adaptador de red de origen                                          |
 | Tag                                  | 4 bytes                              | Etiqueta VLAN opcional para la integración en redes VLAN (IEEE 802.1q)                        |
-| Type                                 | 2 bytes                              | Ethernet II: etiquetado de protocolos de la capa 3                                            |
+| EtherType                                 | 2 bytes                              | Indica el protocolo de la capa superior (0x0800 = IPv4, 0x0806 = ARP)                                            |
 | Length                               | 2 bytes                              | Longitud de la información sobre el registro                                                  |
 | Destination service access point (DSAP) | 1 byte                             | Dirección individual del punto de acceso al servicio                                          |
 | Source service access point (SSAP)   | 1 byte                               | Dirección de origen del dispositivo de envío                                                  |
 | Control                              | 1 byte                               | Define el marco de la LLC (enlace lógico)                                                     |
 | SNAP                                 | 5 bytes                              | Campo para la definición del identificador único de la organización (OUI) y número de protocolo|
-| Data                                 | 44–1500 bytes (según la estructura)  | Los datos que deben transmitirse                                                              |
-| Frame check sequence (FCS)           | 4 bytes                              | Suma de comprobación que calcula la trama completa                                            |
-| Inter frame gap (IFS)                | –                                    | Parada de transmisión de 9,6 µs                                                               |
+| Datos (Payload)                 | 46–1500 bytes  | Contiene la información de la capa superior, es decir, los datos que deben transmitirse (ej. paquete IPv4, ARP)     |
+| Frame check sequence (FCS)           | 4 bytes                              | Suma de comprobación que calcula la trama completa para verificar su integridad                                           |
+| Inter frame gap (IFS)                | –                                    | Espacio entre tramas para permitir al receptor procesarlas                                                              |
 
 #### b)
 
@@ -172,14 +168,14 @@ Se inicia la captura de paquetes en Wireshark y se ejecuta el comando ping hacia
 El paquete enviado en este caso es:
 
 ```
-7c 16 89 b9 29 41 b4 2e 99 ca ff bc 08 00 45 00  
-00 3c dd 1e 00 00 80 01 db b4 c0 a8 00 9c c0 a8   
-00 00 08 00 4d 43 00 01 00 18 61 62 63 64 65 66   
-67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76   
-77 61 62 63 64 65 66 67 68 69                     
+7c 16 89 b9 29 41 b4 2e 99 ca ff bc 08 00 45 00
+00 3c dd 1e 00 00 80 01 db b4 c0 a8 00 9c c0 a8
+00 00 08 00 4d 43 00 01 00 18 61 62 63 64 65 66
+67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76
+77 78 79                     
 ```
 
-A continuación, se hace un análisis de la trama enviada:
+A continuación, se hace un análisis del paquete:
 
 ##### *Encabezado Ethernet*
 
@@ -200,8 +196,8 @@ A continuación, se hace un análisis de la trama enviada:
   * `80` → TTL = 80, lo que indica que el paquete puede atravesar maximo 128 routers
   * `01` → Protocolo Auxiliar, en este caso ICMP
   * `db b4` → Checksum para verificar la integridad del encabezado
-  * `c0 a8 00 9c` → **Dirección IP destino**
-  * `c0 a8 00 01` → **Dirección IP origen**
+  * `c0 a8 00 9c` → **Dirección IP origen**
+  * `c0 a8 00 01` → **Dirección IP destino**
 
 ##### *Encabezado ICMP*
 
@@ -230,8 +226,33 @@ Esta página muestra todos los bloques de direcciones MAC registrados por Sagemc
 
 <img width="1161" height="701" alt="image" src="https://github.com/user-attachments/assets/7c268817-f443-46fa-9a70-a4544b531a75" />
 
+#### e) 
 
-## Discusión y Conclusiones
+Se procede a hacer un ping a la IP pública de uno de los integrantes del grupo y capturamos el paquete con Wireshark:
+
+```
+7c 16 89 b9 29 41 b4 2e 99 ca ff bc 08 00 45 00  
+00 54 1c 20 40 00 40 01 3d 94 c0 a8 64 04 b5 1c  
+07 2c 08 00 e0 7a 19 ad 02 6b dc 07 e6 66 00 00  
+00 00 79 2b 01 00 00 00 00 00 10 11 12 13 14 15   
+16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25
+26 27 28                   
+```
+
+A partir de esto podemos centrarnos en analizar los encabezados iniciales, ya que, al ser un ping, el resto de la información es idéntica
+
+##### *Encabezado Ethernet*
+
+* Como vimos anteriormente, son los primeros 14 bytes de la trama → `7c 16 89 b9 29 41 b4 2e 99 ca ff bc 08 00`
+  * El encabezado es el mismo que en el caso anterior debido a que esta parte se limita a la red local (están la dirección MAC de la PC y del Router del emisor)
+
+##### *Encabezado IP*
+
+* El encabezado obtenido es: `45 00 00 3c dd 1e 00 00 80 01 db b4 c0 a8 00 9c b5 1c 07 2c`
+  * Lo único que cambia es la dirección IP de destino, la cual ahora corresponde a la IP pública del receptor
+
+### 4) Discusión y Conclusiones
+
 
 
 ## Bibliografia
@@ -240,8 +261,3 @@ Esta página muestra todos los bloques de direcciones MAC registrados por Sagemc
 - https://www.smar.com.br/es/articulo-tecnico/emi-interferencia-electromagnetica-en-instalaciones-industriales-y-mucho-mas
 - https://hardzone.es/reportajes/que-es/relacion-senal-ruido-snr-audio/
 - https://www.ionos.es/digitalguide/servidores/know-how/trama-ethernet/
-
-
-
-
-
