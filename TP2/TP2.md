@@ -274,6 +274,48 @@ A partir de esto podemos centrarnos en analizar los encabezados iniciales, ya qu
 
 ### 4) Discusión y Conclusiones
 
+A partir de los resultados obtenidos en este trabajo práctico y de la información complementaria 
+consultada, pueden extraerse las siguientes reflexiones sobre la privacidad de los dispositivos en la red 
+y la trazabilidad de sus direcciones:
+
+- *Dirección MAC y trazabilidad en la red:*  
+  La dirección MAC es un identificador único asignado a cada tarjeta de red.  
+  Sin embargo, su trazabilidad se limita al ámbito local (LAN). Cuando un paquete atraviesa un 
+  router y sale hacia Internet, las direcciones MAC ya no viajan con él: solo permanecen visibles 
+  dentro de la red de área local en la que se encuentra el dispositivo.  
+  Esto significa que, en una red doméstica o en un Wi-Fi público, la dirección MAC de cada 
+  dispositivo es totalmente visible para los equipos en esa misma red.  
+
+- *Privacidad y MAC spoofing:*  
+  Dado que la MAC se expone en las redes locales, existen técnicas de MAC spoofing que permiten 
+  cambiarla por software, con el objetivo de proteger la privacidad del usuario o evitar el rastreo 
+  dentro de una red. Esta práctica es común en dispositivos que se conectan con frecuencia a redes 
+  abiertas o poco seguras.  
+
+- *Comparación con el IMEI:*  
+  El IMEI (International Mobile Equipment Identity) es un número único asociado a cada teléfono 
+  móvil con capacidad de conectarse a la red celular. A diferencia de la MAC, el IMEI no se transmite 
+  de manera constante en la red de datos, pero sí puede ser utilizado por los operadores de telefonía 
+  para identificar y rastrear un dispositivo a nivel global.  
+  Mientras que la MAC se puede modificar fácilmente, el IMEI es fijo y mucho más difícil de alterar, 
+  lo cual lo hace un identificador más estable y persistente.  
+
+- *VPN y dirección MAC:*  
+  Una VPN (Virtual Private Network) cifra el tráfico de Internet y oculta la dirección IP pública del 
+  usuario, redirigiéndola a través de un servidor remoto. Sin embargo, **la VPN no oculta la dirección 
+  MAC dentro de la red local**. Esto implica que otros dispositivos conectados a la misma LAN 
+  (ejemplo: una red Wi-Fi pública) todavía pueden ver la dirección MAC del equipo, incluso si el 
+  tráfico hacia Internet está encriptado.  
+
+En conclusión, la dirección MAC es un identificador fundamental para la comunicación en redes locales, 
+pero su visibilidad puede comprometer la privacidad del usuario en ciertos entornos. El IMEI cumple un 
+rol similar en las redes celulares, con la diferencia de ser fijo y globalmente rastreable.  
+Las técnicas de MAC spoofing y el uso de VPNs pueden mejorar la privacidad en diferentes niveles, 
+aunque ninguna de estas soluciones elimina completamente la exposición de identificadores en todos 
+los escenarios.
+
+
+
 ## Bibliografia
 - https://www.fisicalab.com/apartado/efecto-doppler
 - https://aircashback.com/es/guia/que-pasa-si-no-pongo-el-modo-avion-durante-un-vuelo
