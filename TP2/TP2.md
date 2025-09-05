@@ -28,7 +28,28 @@
 
 ## Resumen
 
+Este trabajo práctico aborda conceptos fundamentales de la capa física y de la capa de enlace de datos del modelo OSI. 
+En primer lugar, se repasa el efecto Doppler y su impacto en sistemas de comunicación inalámbrica, analizando los 
+fenómenos de propagación de ondas en entornos móviles. Luego, se estudia el ruido e interferencia en los canales de 
+transmisión, junto con métricas asociadas como la relación señal-ruido (SNR) y la tasa de error de bit (BER). 
+Posteriormente, se examina la tecnología Ethernet y los medios de transmisión más utilizados (cables UTP directo y 
+cruzado), así como la estructura de una trama Ethernet II. Finalmente, se utiliza el software Wireshark para realizar 
+capturas de paquetes en red local y hacia direcciones públicas, permitiendo observar y analizar en detalle los 
+encabezados Ethernet, IP e ICMP.
+
+
 ## Introducción
+
+El presente trabajo se organiza en forma de cuestionario dividido en tres ejes temáticos principales. 
+En el primero, se busca comprender fenómenos físicos como el efecto Doppler y la propagación de ondas, los cuales 
+afectan directamente a las comunicaciones inalámbricas. En el segundo, se analiza la problemática del ruido e 
+interferencia en los canales de transmisión, estableciendo la relación entre la SNR y la calidad de la señal recibida. 
+En el tercero, se profundiza en la capa de enlace de datos a través del estudio de Ethernet y la captura de tramas 
+mediante la herramienta Wireshark, con el objetivo de vincular la teoría con la práctica. 
+
+El enfoque del trabajo es combinar la revisión teórica de conceptos ya vistos en la materia con la experimentación 
+práctica mediante herramientas de análisis, reforzando así la comprensión de cómo funcionan realmente las 
+comunicaciones de datos en un entorno real.
 
 ## Desarrollo 
 
@@ -252,8 +273,6 @@ A partir de esto podemos centrarnos en analizar los encabezados iniciales, ya qu
   * Lo único que cambia es la dirección IP de destino, la cual ahora corresponde a la IP pública del receptor
 
 ### 4) Discusión y Conclusiones
-
-
 
 ## Bibliografia
 - https://www.fisicalab.com/apartado/efecto-doppler
