@@ -128,5 +128,35 @@ En las fibras ópticas se diseña un núcleo con mayor índice de refracción (*
 
 Tanto las conexiones inalámbricas como las transmisiones en fibra óptica tienen en común que utilizan ondas electromagnéticas para transportar la información. En el caso de la fibra óptica, la transmisión se realiza mediante ondas de luz, generalmente en el rango del infrarrojo o del visible cercano, guiadas a través del núcleo de vidrio. En las conexiones inalámbricas, en cambio, la propagación se da a través del aire utilizando ondas de radio o microondas. Ambas tecnologías están expuestas a fenómenos como la atenuación, la dispersión y las interferencias, aunque en la fibra estos efectos son mucho más controlables. Por ello, la fibra óptica suele emplearse como infraestructura de alta capacidad y gran alcance en redes troncales, mientras que la comunicación inalámbrica resulta más adecuada para la última milla o para brindar movilidad a los usuarios.
 
+### 3) Hoy en día existen muchos protocolos de comunicación inalámbrica, en gran parte gracias al advenimiento de los dispositivos IoT. Con esto en mente, realizar las siguientes actividades:
+
+#### a) Completar el siguiente cuadro, que lista algunos de los protocolos inalámbricos más comunes:
+
+| *Protocolo* | *¿Está estandarizado? Si/No*                | *Estándares*                                                                                                     |
+| ------------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| *Wi-Fi*     | Sí                                      | IEEE 802.11ax - Última versión principal:  Wi-Fi 6 / 6E                                   |
+| *Bluetooth* | Sí                                      | IEEE 802.15.1 - Última versión: Bluetooth 5.4, 2023                                                    |
+| *ZigBee*    | Sí                                      | IEEE 802.15.4 - Última especificación/versión: ZigBee PRO 2017                                                               |
+| *NFC*       | Sí                                      | ISO/IEC 18092 y 14443                                                                      |
+| *LTE*       | Sí                                      | Última versión: LTE-Advanced Pro en 3GPP Release 13-14                                               |
+| *GSM*       | Sí                                      | 3GPP Release 99 (GSM Phase 2+)                                                                         |
+| *5G (3GPP)* | Sí                                      | 3GPP Release 15 (inicio de 5G NR), en evolución con Release 17 y 18 (5G-Advanced)                                                   |
+| *LoRa*      | Parcial (propietario en la capa física) | Especificación LoRa (propietaria de Semtech) + LoRaWAN (estandarizado por LoRa Alliance, última versión 1.0.4 / 2020 y 1.1 en 2023) |
+| *NB-IoT*    | Sí                                      | 3GPP Release 13 en adelante (parte de LTE Cat-NB1/NB2)                                                                              |
+| *SigFox*    | No (protocolo propietario)              | Tecnología cerrada de SigFox S.A.                                                                  |
+| *Z-Wave*    | Sí                   | ITU-T G.9959 - Última versión: Z-Wave Plus v2 (700/800 series)                                      |
 
 
+#### b) Sobre los protocolos mencionados, investigar y colocarlos en el siguiente gráfico (de manera aproximada) de acuerdo a sus características de alcance (distancia) y data rate.
+
+![cuadro](https://github.com/user-attachments/assets/0dab499b-cb1f-4ffd-81d6-fb8462e27a28)
+
+#### c) De acuerdo a lo investigado y visto en las clases teóricas, completar el siguiente cuadro con las características indicadas para los distintos medios de transmisión:
+
+| *Característica* | *UTP* | *Fibra Óptica* | *Wi-Fi 802.11be (Wi-Fi 7)* | *Bluetooth 5.4* | *5G* |
+|---------------------|---------|------------------|------------------------------|-------------------|--------|
+| *Ancho de banda* | Hasta 10 Gbps (Cat6a/7), 40 Gbps en Cat8 | Típicamente 100 Gbps  | Hasta ~40 Gbps (teórico) | ~2 Mbps (BLE), hasta 50 Mbps en modos especiales | 1–10 Gbps , hasta 20 Gbps en 5G-Advanced |
+| *Distancias* | Hasta 100 m por segmento | Varios km (monomodo >100 km, multimodo hasta 500 mts) | 30–50 m | 10–100 m | 1–10 km (dependiendo de la celda) |
+| *Inmunidad a EMI / RFI* | Baja (sensible a interferencias) | Muy alta (inmune) | Media (puede sufrir interferencias en 2.4/5/6 GHz) | Media (afecta interferencia en 2.4 GHz) | Alta (robustez con modulación OFDM y MIMO) |
+| *Costos de medios / conectores / dispositivos* | Bajo  | Alto  | Medio  | Muy bajo  | Alto  |
+| *¿Disponible en Packet Tracer?* | Sí | No | Sí (versiones hasta Wi-Fi 6) | No | No |
