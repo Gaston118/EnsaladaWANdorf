@@ -48,22 +48,22 @@ La IEEE (Institute of Electrical and Electronics Engineers) es una organización
 
 #### Breve cronología de la IEEE:
 
-- 1884, El nacimiento de una Sociedad Técnica. En este año, el instituto americano de Ingenieros Eléctricos (AIEE) se reunieron en Filadelfia, Pensilvania, Estados Unidos. En esta reunión el presidente de Western Union, Norvin Green, se consagró como el primer presidente de este instituto. El vicepresidente fué Thomas Alva Edison.
-- 1891, Alexander Graham Bell, conocido como el padre del teléfono, sirvió como presidente de la IEEE hasta el año 1892.
-- 1912, Los profesionales de radio se organizaron. El ingeniero electrónico italiano Guglielmo Marconi patentó su telégrafo inalambrico y la radio invadió los aires. En este mismo año se hundió el Titanic, y el Instituto de Radio Ingenieros se fundó.
-- 1922, La primer mujer contratada. Edith Clarke fué la primera ingeniera electrónica profesional de los Estados Unidos. fue reconocida como IEEE "Fellow" y además ingresó al Salón de la Fama de Inventores de EE. UU.
-- 1924, Presidente pasado de la IRE con mención de honor. Michael I. Pupin, un físico-matemático, recibió la medalla de honor del IRE, el cual luego se convertiría en un gran premio de la IEEE por innovaciónes en señalización y ajuste de electrónica. También ganó, en los años posteriores, el premio Pulitzer.
-- 1952, "Amazing Grace" revolucionó la programación. Grace Hopper, miembro de la IEEE y matemática en Eckert-Mauchly Corp., desarrolló el compilador A-0. Este fué un hito de la IEEE, que reemplazó el uso de tarjetas perforadas. Ahora las computadoras podian convertir lenguaje en codigo binario.
-- 1963, AIEE e IRE se unieron formalmente como la IEEE. A mitad del siglo 20, la electricidad se abrió paso en cada esquina del día a día y los intereses de la AIEE y la IRE incrementaron abruptamente. El primero de enero de 1963, estas sociedades convergieron en una para convertirse en la IEEE, con 150.000 miembros.
-- 1972, Se envían datos a la Luna a traves de una antena. La radio 43 de la "Deep Space Station" de la NASA permitió a la Tierra comunicarse con la Luna, especificamente hacer contacto con los astronautas de la mision Apollo. Actualmente esta antena sigue siendo la unica capaz de comunicarse con Voyager 2, sonda que esta en el espacio estelar desde 2018.
-- 1973, La fundación IEEE se funda. La fundación IEEE comienza con una reunion del comité de Nueva York con el propósito de brindar soporte financiero al programa. 
-- 1988, Pixar muestra el "CGI". El software de CGI o "Computer-Generated Imagery" trajo a la vida la película animada Toy Story.
-- 1997, Toyota intruduce el auto híbrido. La automotriz introdujo el primer autohíbrido de producción masiva en Japon. 
-- 2009, La fibra óptica agiliza las señales. El miembro de la IEEE, Charles Kuen Kao acepta el premio Nobel en físicas por descubrimientos que permitieron al teléfono, la televisión y las transmisiones de internet moverse practicamente a la velocidad de la luz.
-- 2012, Los procedimientos de convirtieron en 100. La IEEE hace su 100va publicación.
-- 2014, La primer mujer en recibir la mención de honor. La ingeniera electrónica Mildred Dresselhaus, del MIT, y la matemática Katherine Johnson de la NASA aceptan Medallas Presidenciales de Libertad en 2014 y 2015.
-- 2020, La expansión de la IEEE continua. Se discuten temas como los diamantes hechos por el hombre, extremidades biónicas, criptomonedas, etc.
-- Actualiad. IA, Java, Tecnología Climática y más. Se populariza la IA. Java cumple 30 años, con computadoras que aún usan el lenguaje.
+- **1884**. El nacimiento de una Sociedad Técnica. En este año, el instituto americano de Ingenieros Eléctricos (AIEE) se reunieron en Filadelfia, Pensilvania, Estados Unidos. En esta reunión el presidente de Western Union, Norvin Green, se consagró como el primer presidente de este instituto. El vicepresidente fué Thomas Alva Edison.
+- **1891**. Alexander Graham Bell, conocido como el padre del teléfono, sirvió como presidente de la IEEE hasta el año 1892.
+- **1912**. Los profesionales de radio se organizaron. El ingeniero electrónico italiano Guglielmo Marconi patentó su telégrafo inalambrico y la radio invadió los aires. En este mismo año se hundió el Titanic, y el Instituto de Radio Ingenieros se fundó.
+- **1922**. La primer mujer contratada. Edith Clarke fué la primera ingeniera electrónica profesional de los Estados Unidos. fue reconocida como IEEE "Fellow" y además ingresó al Salón de la Fama de Inventores de EE. UU.
+- **1924**. Presidente pasado de la IRE con mención de honor. Michael I. Pupin, un físico-matemático, recibió la medalla de honor del IRE, el cual luego se convertiría en un gran premio de la IEEE por innovaciónes en señalización y ajuste de electrónica. También ganó, en los años posteriores, el premio Pulitzer.
+- **1952**. "Amazing Grace" revolucionó la programación. Grace Hopper, miembro de la IEEE y matemática en Eckert-Mauchly Corp., desarrolló el compilador A-0. Este fué un hito de la IEEE, que reemplazó el uso de tarjetas perforadas. Ahora las computadoras podian convertir lenguaje en codigo binario.
+- **1963**. AIEE e IRE se unieron formalmente como la IEEE. A mitad del siglo 20, la electricidad se abrió paso en cada esquina del día a día y los intereses de la AIEE y la IRE incrementaron abruptamente. El primero de enero de 1963, estas sociedades convergieron en una para convertirse en la IEEE, con 150.000 miembros.
+- **1972**. Se envían datos a la Luna a traves de una antena. La radio 43 de la "Deep Space Station" de la NASA permitió a la Tierra comunicarse con la Luna, especificamente hacer contacto con los astronautas de la mision Apollo. Actualmente esta antena sigue siendo la unica capaz de comunicarse con Voyager 2, sonda que esta en el espacio estelar desde 2018.
+- **1973** La fundación IEEE se funda. La fundación IEEE comienza con una reunion del comité de Nueva York con el propósito de brindar soporte financiero al programa. 
+- **1988**. Pixar muestra el "CGI". El software de CGI o "Computer-Generated Imagery" trajo a la vida la película animada Toy Story.
+- **1997**. Toyota intruduce el auto híbrido. La automotriz introdujo el primer autohíbrido de producción masiva en Japon. 
+- **2009**. La fibra óptica agiliza las señales. El miembro de la IEEE, Charles Kuen Kao acepta el premio Nobel en físicas por descubrimientos que permitieron al teléfono, la televisión y las transmisiones de internet moverse practicamente a la velocidad de la luz.
+- **2012** Los procedimientos de convirtieron en 100. La IEEE hace su 100va publicación.
+- **2014**. La primer mujer en recibir la mención de honor. La ingeniera electrónica Mildred Dresselhaus, del MIT, y la matemática Katherine Johnson de la NASA aceptan Medallas Presidenciales de Libertad en 2014 y 2015.
+- **2020**. La expansión de la IEEE continua. Se discuten temas como los diamantes hechos por el hombre, extremidades biónicas, criptomonedas, etc.
+- **Actualiad**. IA, Java, Tecnología Climática y más. Se populariza la IA. Java cumple 30 años, con computadoras que aún usan el lenguaje.
 
 La IEEE tiene como campo de aplicación todo lo relacionado con el avance de la tecnología eléctrica, electrónica, de telecomunicaciones, informática y áreas afines. Sus principales actividades abarcan la creación de estándares internacionales, la publicación de investigaciones científicas, la organización de conferencias y el impulso a la innovación en sectores como energía, computación, redes, inteligencia artificial y comunicaciones.
 
