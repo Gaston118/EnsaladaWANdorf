@@ -182,3 +182,21 @@ Este estudio mide el rendimiento real del servicio Starlink en aviones, incluyen
 
 #### c) La mayoría de los aviones que utilizan redes Wi-Fi permiten sistemas de “entretenimiento a bordo” para, por ejemplo, acceder a películas o contenido de entretenimiento. Pensar y responder: ¿Cómo se divide el tráfico entre el contenido a bordo y el internet?
 
+El tráfico se separa en dos partes distintas de red dentro del avión:
+- Red local de entretenimiento a bordo (IFE – In-Flight Entertainment)
+  - El contenido (películas, música, series, juegos) está almacenado en servidores locales del avión.
+  - Los pasajeros acceden vía Wi-Fi, pero no salen a Internet: el tráfico se queda dentro del avión.
+
+- Ventajas:
+  - Alta velocidad, porque no depende del enlace satelital/ATG.
+  - No consume ancho de banda caro.
+  - Latencia muy baja, al ser LAN interna.
+  - Acceso a Internet en vuelo
+
+- El tráfico con destino fuera del avión (web, correo, streaming externo, redes sociales) se encamina hacia el enlace de comunicaciones externo (satélite o air-to-ground).
+
+- Limitaciones:
+  - Ancho de banda compartido entre todos los usuarios.
+  - Alta latencia (especialmente en satélites GEO).
+  - Costos altos de transmisión, por eso las aerolíneas suelen cobrarlo aparte.
+ 
