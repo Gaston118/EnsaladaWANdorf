@@ -160,3 +160,25 @@ Tanto las conexiones inalámbricas como las transmisiones en fibra óptica tiene
 | *Inmunidad a EMI / RFI* | Baja (sensible a interferencias) | Muy alta (inmune) | Media (puede sufrir interferencias en 2.4/5/6 GHz) | Media (afecta interferencia en 2.4 GHz) | Alta (robustez con modulación OFDM y MIMO) |
 | *Costos de medios / conectores / dispositivos* | Bajo  | Alto  | Medio  | Muy bajo  | Alto  |
 | *¿Disponible en Packet Tracer?* | Sí | No | Sí (versiones hasta Wi-Fi 6) | No | No |
+
+
+### 4) Vamos a investigar y estudiar algo sobre el estado del arte (buscar qué significa esto si no lo sabes!). Hoy en día es posible conectarse a internet en un avión en vuelo (en general, pagando un extra).
+
+- "El estado del arte es un proceso de investigación que implica leer y analizar diferentes textos académicos para conocer lo que se ha investigado sobre un tema en particular. Es importante destacar que un estado del arte no es simplemente una lista de textos con resúmenes cortos de cada uno, sino que implica la selección y análisis de las partes más relevantes para la investigación."
+
+#### a) Investigar qué tecnologías permiten esto y sus principales características y limitaciones desde una perspectiva de Comunicaciones de Datos.
+
+Investigando logramos entender como funciona la tecnologia Wi-Fi en los aviones, a continuacion dejamos sus principales caracteristicas y limitaciones:
+
+- Por un lado, se conoce como la conexion Red Aire Tierra (ATG), con este tipo de red, la parte inferior del avión está equipada con antenas que se conectan con la torre más cercana en tierra. La señal va al servidor de cabina y luego al enrutador de a bordo, lo que convierte al avión en un hotspot para los pasajeros. Los inconvenientes de este método, sin embargo, son obvios:
+  - El avión tiene que estar sobre tierra (o cerca de ella) para que funcione bien. Claro, podrás hacer cosas básicas como consultar un email o enviar un mensaje instantáneo, pero no mucho más, sobre todo en vuelos internacionales.
+ 
+- Por el otro, se conoce la Red satelital. Al igual que las ATG, este método también utiliza antenas, pero están montadas en la parte superior del avión y se conectan a una red de satélites (el que esté más cerca) mientras el avión viaja. La señal llega hasta el servidor de a bordo, pasa por un enrutador wifi y llega hasta el consumidor. El servicio por satélite utiliza redes tanto de banda estrecha como de banda ancha para ofrecerte un acceso completo a Internet. Lo que le falta a la banda estrecha en cuanto a la capacidad de ver películas, jugar a videojuegos y cosas por el estilo, la banda ancha lo compensa en cierto modo.
+
+#### b) Buscar y encontrar al menos una publicación científico/tecnológica con una antigüedad no mayor a un año que aborde algún aspecto de este tema.
+
+- "A First Look at Starlink In-Flight Performance": https://arxiv.org/html/2508.09839v1
+Este estudio mide el rendimiento real del servicio Starlink en aviones, incluyendo throughput, latencia, estabilidad, impacto de altitud y velocidad. A su vez tiene mediciones reales, es decir, de los pasajeros.
+
+#### c) La mayoría de los aviones que utilizan redes Wi-Fi permiten sistemas de “entretenimiento a bordo” para, por ejemplo, acceder a películas o contenido de entretenimiento. Pensar y responder: ¿Cómo se divide el tráfico entre el contenido a bordo y el internet?
+
