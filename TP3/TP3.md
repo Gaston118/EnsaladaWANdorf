@@ -69,6 +69,10 @@ La IEEE tiene como campo de aplicación todo lo relacionado con el avance de la 
 
 #### b) En la Facultad, conectarse a alguna de las siguientes redes abiertas: FCEFyN, UNC-LIBRE, EduRoam. Determinar qué versión del protocolo 802.11 utiliza y mostrar el procedimiento que utilizó para averiguarlo.
 
+Nos conectamos a la red “FCEFYN” de la facultad con una laptop, con Windows como SO. En la línea de comandos, corremos el comando ```netsh wlan show interfaces```. Obtenemos así información sobre las tarjetas de red inalámbricas y las redes a la que están conectadas. Podemos ver que “FCEFYN” es una red de protocolo 802.11ac.
+
+<img width="862" height="434" alt="image" src="https://github.com/user-attachments/assets/42144982-f5f5-4ea0-9451-eb21d408b39f" />
+
 #### c) ¿Qué sucede si una red Wi-Fi opera con determinado protocolo y un dispositivo (por ejemplo, una notebook vieja) utiliza una NIC que no soporta dicho protocolo?
 
 Si la tarjeta de red o NIC de un dispositivo no soporta la versión del protocolo Wi-Fi que utiliza la red, el dispositivo no podrá conectarse a la misma. Esto se debe a que los estándares 802.11 (a, b, g, n, ac, ax, etc.) definen tanto la frecuencia de operación, que puede variar entre 2.4 GHz, 5 GHz y 6 GHz, como las velocidades de transmisión y los métodos de codificación y seguridad.
@@ -87,7 +91,9 @@ Cada versión del protocolo utilizado presenta más seguridad a medida que se ac
 | 802.11ac  | WPA2             | Solo AES, más robusto; mayor velocidad.                         |
 | 802.11ax  | WPA3             | Última versión, cifrado más fuerte y autenticación más robusta. |
 
-Completar con la red de la facu.
+**Seguridad de la red FCEFyN**
+
+Como la red es abierta y no pide contraseña, no usa sistemas de seguridad como WPA2 o WPA3. Esto significa que los datos que se envían y reciben no están protegidos, por lo que cualquiera con malas intenciones podría espiarlos o robar información fácilmente.
 
 #### e) Considerando los protocolos más recientes y su denominación en el argot de la industria (WiFi5/6/7), investigar y completar el siguiente cuadro:
 
