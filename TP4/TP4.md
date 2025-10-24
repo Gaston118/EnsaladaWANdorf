@@ -44,7 +44,7 @@
 
 ### 1) Implementaremos la siguiente topología en Packet-Tracer:
 
-# [IMAGEN]
+<img width="560" height="153" alt="image" src="https://github.com/user-attachments/assets/1a57d4cf-bdb0-4825-85b6-4e36a22396d3" />
 
 #### Tabla de ruteo:
 
@@ -139,11 +139,11 @@ i) Clase Turista: acceso solo a un sistema de entretenimiento (server local)
 ii) Clase Business: acceso a sistema de entretenimiento e internet.
 iii) Administración: acceso total.
 
-# [IMAGEN]
+<img width="712" height="236" alt="image" src="https://github.com/user-attachments/assets/914434a0-c84b-4da1-aac9-4b8fdb6bf1bf" />
 
 #### Ejemplo de topología de red
 
-# [IMAGEN]
+<img width="512" height="469" alt="image" src="https://github.com/user-attachments/assets/b38739c0-e74a-44cb-97b8-2aa7fbfce23b" />
 
 #### Tabla de Direccionamiento:
 
@@ -158,7 +158,14 @@ Se puede modificar en tanto el espíritu de la actividad se mantenga.
 
 #### Pruebas
 
-# [IMAGEN]
+| Prueba                                 | Desde       | Hacia             | Resultado esperado |
+|----------------------------------------|-------------|-------------------|--------------------|
+| Ping al servidor de entretenimiento    | PC Turista  | 10.10.99.10       | ✅ Responde         |
+| Acceso HTTP a servidor local           | PC Turista  | http://10.10.99.10 | ✅ Carga la página  |
+| Ping a Internet                        | PC Turista  | —                 | ❌ Bloqueado        |
+| Acceso HTTP a servidor local           | PC Business | http://10.10.99.10 | ✅ Carga            |
+| Ping a Internet (ej: 8.8.8.8)          | PC Business | —                 | ✅ Funciona         |
+| Ping entre Admin y todos               | Admin PC    | —                 | ✅ Todos            |
 
 Se puede simular “internet” con cualquier cosa que responda del lado del ISP.
 
