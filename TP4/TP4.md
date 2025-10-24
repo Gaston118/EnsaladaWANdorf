@@ -256,6 +256,8 @@ Supongamos que un switch tiene configuradas VLAN 10 (Laboratorio) y VLAN 20 (Adm
 | PC-A    | NIC        | 192.168.10.3 | 255.255.255.0   | 192.168.10.1    |
 | PC-B    | NIC        | 192.168.10.4 | 255.255.255.0   | 192.168.10.1    |
 
+<img width="828" height="181" alt="image" src="https://github.com/user-attachments/assets/3010af38-d6ec-4c51-bdd7-ce3628375e97" />
+
 #### **a) Desde cada computadora, ingresar a la terminal y configurar los switch. Nombrar a los mismos sw1 y sw2 respectivamente.**
 
 <img width="512" height="99" alt="image" src="https://github.com/user-attachments/assets/07c84858-d7e5-4f48-a899-03e97c63a43b" />
