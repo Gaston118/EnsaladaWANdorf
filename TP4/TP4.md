@@ -256,83 +256,90 @@ Supongamos que un switch tiene configuradas VLAN 10 (Laboratorio) y VLAN 20 (Adm
 | PC-A    | NIC        | 192.168.10.3 | 255.255.255.0   | 192.168.10.1    |
 | PC-B    | NIC        | 192.168.10.4 | 255.255.255.0   | 192.168.10.1    |
 
-#### **a) Desde cada computadora, ingresar a la terminal y configurar los switch. Nombrar a los mismos sw1 y sw2 respectivamente.** Ayuda: investigar los comandos necesarios online si no te acordás, por ejemplo, para cambiar el nombre del switch.
+#### **a) Desde cada computadora, ingresar a la terminal y configurar los switch. Nombrar a los mismos sw1 y sw2 respectivamente.**
 
-```cmd
-switch>
-switch>en
-switch#conf t
-switch(config)#hostname nombre
-```
+<img width="512" height="99" alt="image" src="https://github.com/user-attachments/assets/07c84858-d7e5-4f48-a899-03e97c63a43b" />
+<img width="512" height="99" alt="image" src="https://github.com/user-attachments/assets/2a4f9e15-97c9-4f77-8e35-116317fd699e" />
 
-#### **b) Asignar contraseñas privilegiadas, de consola y vty.** Ayuda:
+#### **b) Asignar contraseñas privilegiadas, de consola y vty.**
 
-```cmd
-enable secret contrasena_exec
-line console 0
-password contrasena_consola
-login
-exit
-line vty 0 15
-password contrasena_vty
-login
-exit
-```
+<img width="516" height="173" alt="image" src="https://github.com/user-attachments/assets/f0cafe96-edc0-4a41-8f8b-2052e5fc403d" />
+<img width="516" height="173" alt="image" src="https://github.com/user-attachments/assets/95c05639-27b3-43c8-b49b-34127fedb6b5" />
 
-#### **c) Encriptar las contraseñas** (Ayuda: utilizar `service password-encryption`)
+#### **c) Encriptar las contraseñas**
 
-#### **d) Configurar las redes VLAN para ambos switch según la tabla de direcciones provista.** Ayuda:
+<img width="316" height="29" alt="image" src="https://github.com/user-attachments/assets/cfcca631-8c84-42ff-b411-52a77a31ea97" />
+<img width="316" height="29" alt="image" src="https://github.com/user-attachments/assets/48ddca22-16b6-41e1-bdbe-911cb877446d" />
 
-```cmd
-interface vlan 1
-ip address <IP_address> <subnet_mask>
-no shutdown
-exit
-```
+#### **d) Configurar las redes VLAN para ambos switch según la tabla de direcciones provista.**
 
-#### **e) Desconectar todas las interfaces que no estén siendo utilizadas** (Ayuda: podés ver las interfaces utilizando `show ip interface brief`)
+<img width="367" height="103" alt="image" src="https://github.com/user-attachments/assets/bd4d0cb4-fbd1-4ca9-97bc-b8ddac3e3357" />
+<img width="366" height="84" alt="image" src="https://github.com/user-attachments/assets/4e1b3e29-2379-41fa-8b8b-35bf184c71e2" />
 
-#### **f) Guardar la configuración (`write memory`)**
+#### **e-f) Desconectar todas las interfaces que no estén siendo utilizadas** - Guardar la configuración
+
+<img width="567" height="490" alt="image" src="https://github.com/user-attachments/assets/c1f1e011-8e5d-4af8-940d-a55ca1cc3c47" />
+<img width="567" height="490" alt="image" src="https://github.com/user-attachments/assets/8ca784e9-8fcd-4338-9b77-6d7bd1277cfd" />
 
 #### **g) Testear comunicación usando pings entre las computadoras.**
 
-#### **h) Crear VLANs en ambos switches.** Ayuda:
+<img width="567" height="490" alt="image" src="https://github.com/user-attachments/assets/200f57d1-006e-4553-b8e3-bb0cf090aea5" />
 
-```cmd
-sw1(config)# vlan 10
-sw1(config-vlan)# name Laboratorio
-sw1(config-vlan)# vlan 20
-sw1(config-vlan)# name Bar
-sw1(config-vlan)# vlan 99
-sw1(config-vlan)# name Management
-sw1(config-vlan)# end
-```
+#### **h) Crear VLANs en ambos switches.**
 
-#### **i) Utilizar show vlan brief para visualizar la lista de VLANs en alguno de los switch. ¿Cuál es la VLAN utilizada por defecto?. Colocar el output en el informe.**
+<img width="502" height="159" alt="image" src="https://github.com/user-attachments/assets/5c047589-99a3-406f-97a2-3db280aebe5c" />
+<img width="502" height="159" alt="image" src="https://github.com/user-attachments/assets/1c20fc8e-5175-427c-986f-c602f4fc73d5" />
 
-#### **j) Asignar la PC-A a la VLAN Laboratorio.** Ayuda:
+#### **i) Utilizar show vlan brief para visualizar la lista de VLANs en alguno de los switch. ¿Cuál es la VLAN utilizada por defecto?.**
 
-```cmd
-sw1(config)# interface f0/6
-sw1(config-if)# switchport mode access
-sw1(config-if)# switchport access vlan 10
-```
+<img width="555" height="278" alt="image" src="https://github.com/user-attachments/assets/f251e618-5402-4027-bddc-2d1fb93f1885" />
 
-#### **k) Desde la VLAN 1, remover la ip de Management y configurarla para funcionar en la VLAN 99 (que configuramos como Management).** Ayuda:
+- VLAN por defecto: vlan 1
 
-```cmd
-sw1(config)# interface vlan 1
-sw1(config-if)# no ip address
-sw1(config-if)# interface vlan 99
-sw1(config-if)# ip address IP MASCARA
-sw1(config-if)# end
-```
+#### **j) Asignar la PC-A a la VLAN Laboratorio.**
 
-#### **l) Verificar el estado de la VLAN utilizando show vlan brief y el estado de las interfaces utilizando show ip interface brief. Colocar los output en el informe e interpretar.**
+<img width="543" height="152" alt="image" src="https://github.com/user-attachments/assets/e40f5c39-f2f8-4b53-a6d6-3437ab1fc3d8" />
+
+#### **k) Desde la VLAN 1, remover la ip de Management y configurarla para funcionar en la VLAN 99 (que configuramos como Management).**
+
+<img width="542" height="280" alt="image" src="https://github.com/user-attachments/assets/42d5a7a2-931e-4d21-89ef-098b1521bbdf" />
+
+#### **l) Verificar el estado de la VLAN utilizando show vlan brief y el estado de las interfaces utilizando show ip interface brief.**
+
+<img width="542" height="280" alt="image" src="https://github.com/user-attachments/assets/4511b8e4-aa99-4487-8263-1fdeef9c8239" />
+
+- VLAN 1 default: Todavía tiene casi todos los puertos, incluyendo Fa0/1 (el enlace a sw2) y Fa0/2, Fa0/3, etc.
+- VLAN 10 Lab: Tiene asignado el puerto Fa0/6. Esto es correcto. Es el puerto donde está conectada la PC-A.
+- VLAN 20 Bar y VLAN 99 Man: Están creadas (active) pero no tienen ningún puerto de acceso asignado, lo cual es normal.
+
+<img width="565" height="475" alt="image" src="https://github.com/user-attachments/assets/06a9bda2-5ef1-404f-9193-b754cbef0cec" />
+
+- FastEthernet0/1: Su estado es up y el protocolo es up. Esto confirma que el cable al sw2 está bien conectado y el enlace funciona.
+- FastEthernet0/6: Su estado es up y el protocolo es up. Esto confirma que el cable a la PC-A está bien conectado y el enlace funciona.
+- Vlan1: Su estado es up y up, pero unassigned (sin IP). Esto es correcto, ya le quitaste la IP. Sigue up porque (como veremos) el puerto Fa0/1 la sigue usando como VLAN nativa.
+- Vlan99: Tiene la IP 192.168.1.11 y su estado es up y up.
 
 #### **m) Asignar la PC-B a la VLAN Laboratorio en el sw2. Repetir el inciso k) pero para el sw2.**
 
-#### **n) Verificar la conectividad entre PC-A y PC-B utilizando pings. Verificar conectividad entre sw1 y sw2 utilizando pings. Interpretar los resultados.**
+<img width="619" height="236" alt="image" src="https://github.com/user-attachments/assets/338f4d4e-4fc4-40da-b8cc-5e9547077059" />
+<img width="621" height="447" alt="image" src="https://github.com/user-attachments/assets/36d5d168-c149-433a-8c7a-6f7376d91f01" />
+
+#### **n) Verificar la conectividad entre PC-A y PC-B utilizando pings. Verificar conectividad entre sw1 y sw2 utilizando pings.**
+
+<img width="1363" height="598" alt="image" src="https://github.com/user-attachments/assets/a6f17fdf-05ef-4378-9f18-854a9ca88d26" />
+
+- Conectividad entre pcs:
+  - Ambas PCs pertenecen a la VLAN 10 (Laboratorio) configurada en los switches.
+  - El enlace trunk entre switches permite que el tráfico de la VLAN 10 se propague entre ellos.
+  - Las PCs en la VLAN 10 se comunican correctamente entre sí a través de los dos switches. Esto confirma el correcto funcionamiento de la segmentación por VLAN, la propagación de VLANs por trunk y la conectividad de capa 2.
+  
+<img width="1356" height="182" alt="image" src="https://github.com/user-attachments/assets/13a6f5fa-538d-4f77-9da6-1fd6141f57a0" />
+
+- Conectividad entre switches:
+  - La VLAN 99 (Man) está correctamente configurada en ambos switches.
+  - Las interfaces Vlan99 están en estado up/up, indicando que hay un enlace activo y funcional.
+  - El puerto Fa0/1 configurado como trunk transporta correctamente las VLANs de gestión.
+  - La VLAN de gestión opera correctamente y los switches pueden administrarse mutuamente.
 
 ### **3) Utilizando lo que aprendimos sobre VLAN, e investigando la configuración de NAT y ACLs, simularemos el despliegue de una red LAN a bordo de una aeronave. La idea es la siguiente, tendremos tres segmentos:**
 
