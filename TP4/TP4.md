@@ -364,7 +364,19 @@ iii) **Administración:** acceso total.
 | 99   | Administración   | 10.10.99.0/24  | 10.10.99.1    | Acceso total        |
 | —    | Enlace ISP       | 200.0.0.0/30   | 200.0.0.1–.2  | —                   |
 
-Se puede modificar en tanto el espíritu de la actividad se mantenga.
+---
+
+<img width="677" height="524" alt="image" src="https://github.com/user-attachments/assets/2c879a64-b2bc-4b61-9987-9bf3ee113890" />
+
+<img width="664" height="401" alt="image" src="https://github.com/user-attachments/assets/303fdf7d-de2d-4c63-add0-f1ac74e53389" />
+
+<img width="664" height="401" alt="image" src="https://github.com/user-attachments/assets/9238ab8f-806a-41e6-b3ac-062c5ad9e58a" />
+
+<img width="667" height="361" alt="image" src="https://github.com/user-attachments/assets/b1e1ff4b-676a-463e-b1e2-b8c366416fd4" />
+
+<img width="668" height="494" alt="image" src="https://github.com/user-attachments/assets/7b27b20a-68dd-425a-944e-4ca25bc723b8" />
+
+<img width="648" height="386" alt="image" src="https://github.com/user-attachments/assets/074f2abb-51f4-4bfd-be6e-c1fa3750dfe9" />
 
 #### **Pruebas**
 
@@ -377,9 +389,43 @@ Se puede modificar en tanto el espíritu de la actividad se mantenga.
 | Ping a Internet (ej: 8.8.8.8)          | PC Business | —                 | ✅ Funciona         |
 | Ping entre Admin y todos               | Admin PC    | —                 | ✅ Todos            |
 
-Se puede simular “internet” con cualquier cosa que responda del lado del ISP.
+pruebas PC0 (Tursita)
 
-Detallar en el informe el diagrama de red (hecho en PT), capturas de pantalla, y conclusiones.
+<img width="639" height="236" alt="image" src="https://github.com/user-attachments/assets/966c7b07-a85a-4672-8c14-660a8ddcd57e" />
+
+<img width="698" height="574" alt="image" src="https://github.com/user-attachments/assets/125730ed-56d9-4780-aaed-ab8588caced0" />
+
+<img width="659" height="205" alt="image" src="https://github.com/user-attachments/assets/d467e48e-9886-461f-85f5-7f39a8a90903" />
+
+---
+
+pruebas PC1 (Business)
+
+<img width="659" height="236" alt="image" src="https://github.com/user-attachments/assets/ee6aa948-14b2-45cd-9ac0-f2fee28b1df0" />
+
+<img width="682" height="290" alt="image" src="https://github.com/user-attachments/assets/349b1650-676f-4d66-9490-0003cf4a1376" />
+
+---
+
+pruebas PC2 (Administracion)
+
+Admin -> Internet:
+
+<img width="662" height="225" alt="image" src="https://github.com/user-attachments/assets/2ba38202-a05f-42dc-83fb-2c8d983e89f7" />
+
+Admin -> Turista:
+
+<img width="662" height="225" alt="image" src="https://github.com/user-attachments/assets/c4b39f8e-7445-44ce-9347-b49835af4f75" />
+
+Admin -> Server:
+
+<img width="662" height="225" alt="image" src="https://github.com/user-attachments/assets/b28d7fcb-cd8b-4b4d-86f1-8be996d194f5" />
+
+Admin -> Web:
+
+<img width="662" height="225" alt="image" src="https://github.com/user-attachments/assets/534557b6-8f4f-4a09-b093-8053604b3767" />
+
+---
 
 ## **Bibliografia**
 
