@@ -425,6 +425,11 @@ Admin -> Web:
 
 <img width="662" height="225" alt="image" src="https://github.com/user-attachments/assets/534557b6-8f4f-4a09-b093-8053604b3767" />
 
+De lo realizado para cada segmento de la aeronave, concluimos lo siguiente:
+- Clase Turista (VLAN 10): Las pruebas confirman que este segmento tiene acceso únicamente al servidor de entretenimiento local (ping y HTTP a 10.10.99.10 exitosos), mientras que el acceso a Internet (ping a 8.8.8.8) está correctamente bloqueado (100% de pérdida de paquetes). Esto se logró mediante la omisión deliberada de esta red en la lista de acceso NAT, impidiendo la traducción de sus direcciones IP.
+- Clase Business (VLAN 20): Las pruebas validan que los usuarios de esta clase tienen acceso tanto al servidor de entretenimiento local como a Internet (ping a 8.8.8.8 exitoso). Esto se consiguió incluyéndola en la access-list 20 utilizada para el ip nat overload.
+- Administración (VLAN 99): Las pruebas demuestran el "acceso total" requerido. Este segmento puede navegar por Internet (ping a 8.8.8.8), acceder al servidor local (ping y HTTP) y comunicarse con otras VLANs (ping a PC Turista 10.10.10.11 exitoso), confirmando un correcto enrutamiento inter-VLAN y una configuración NAT adecuada.
+
 ---
 
 ## **Bibliografia**
