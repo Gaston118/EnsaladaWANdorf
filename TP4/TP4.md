@@ -28,7 +28,17 @@
 
 ## **Resumen**
 
+El presente trabajo práctico aborda conceptos fundamentales de redes y virtualización. Inicialmente, se realiza una investigación teórica sobre la clasificación de redes según su alcance (PAN, LAN, MAN, WAN) y se profundiza en la tecnología de Redes de Área Local Virtuales (VLAN), analizando su funcionamiento, ventajas y el estándar IEEE 802.1Q que permite el etiquetado (tagging) de tramas.
+
+La segunda parte del trabajo se centra en la aplicación práctica de estos conceptos mediante el simulador Cisco Packet Tracer. Se desarrollan dos topologías: una primera para configurar VLANs básicas, enlaces troncales y VLANs de gestión entre dos switches; y una segunda, más compleja, que simula una red de a bordo de una aeronave. En este último escenario, se implementa enrutamiento inter-VLAN, Listas de Control de Acceso (ACL) y Traducción de Direcciones de Red (NAT) para segmentar y proveer diferentes niveles de acceso (Internet, servidor local) a distintas clases de usuarios (Turista, Business, Administración), validando el cumplimiento de todos los requisitos mediante pruebas de conectividad.
+
 ## **Introducción**
+
+En el mundo interconectado actual, las redes de comunicaciones de datos son cruciales. A medida que crecen, su administración se complica, especialmente en las Redes de Área Local (LAN), donde la falta de segmentación puede causar tormentas de broadcast, problemas de rendimiento y fallos de seguridad. La tecnología de Redes de Área Local Virtuales (VLAN) es la solución esencial, permitiendo segmentar lógicamente una red física en múltiples dominios independientes.
+
+Este trabajo práctico tiene como objetivo principal el estudio y la aplicación de estas técnicas. Se inicia con una revisión teórica de la clasificación de redes por alcance y se profundiza en el estándar IEEE 802.1Q, que define el funcionamiento de las VLANs.
+
+Posteriormente, se traslada esta teoría a la práctica utilizando el simulador Cisco Packet Tracer. Primero, se configura una topología básica para implementar VLANs, enlaces troncales (trunks) y una VLAN de gestión entre dos switches. Finalmente, se aborda un escenario más avanzado simulando la red de una aeronave, combinando enrutamiento inter-VLAN, Listas de Control de Acceso (ACL) y NAT para gestionar el acceso diferenciado a servicios internos e Internet, demostrando así cómo crear redes seguras, eficientes y escalables.
 
 ## **Desarrollo**
 
