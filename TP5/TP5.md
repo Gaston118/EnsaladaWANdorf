@@ -114,6 +114,23 @@ Pub/Sub proporciona un marco para el intercambio de mensajes entre editores (com
 
 #### **e) Capturar un paquete usando un sniffer y realizar un análisis simple de la composición del mismo.**
 
+#### **d-e)**
+
+<img width="1329" height="406" alt="image" src="https://github.com/user-attachments/assets/23f2f230-c81c-42b2-802a-3f1eddc186ea" />
+
+<img width="1329" height="406" alt="image" src="https://github.com/user-attachments/assets/921b08c0-007e-4b3b-a477-22de4d57d475" />
+
+- Capa de Transporte: TCP
+   - Protocolo: Como se ve en la columna "Protocol", la capa de transporte que se está utilizando es TCP (Transmission Control Protocol).
+   - Análisis: MQTT se construye sobre TCP porque necesita una comunicación fiable y ordenada. A diferencia de UDP, TCP garantiza que los mensajes (como los datos de tus sensores) lleguen al broker sin errores y en el orden correcto.
+   - Evidencia: En la captura se pueden ver paquetes TCP con el flag [ACK]. Estos son los acuses de recibo que TCP utiliza para confirmar que los datos se han recibido correctamente.
+
+- Capa de Aplicación: TLS (sobre MQTT)
+   - Protocolo: La gran mayoría de los paquetes no dicen "MQTT", sino TLSv1.2 o TLSv1.3.
+   - Análisis: Esto es porque nos conectamos usando la URL mqtts:// y el puerto 8883, que es el puerto para MQTT Seguro. La S en mqtts significa que todo el tráfico de MQTT se envuelve (o "tuneliza") dentro de una capa de cifrado TLS (Transport Layer Security).
+   - Evidencia: Los paquetes etiquetados como "Application Data" son, en realidad, los comandos MQTT (PUBLISH, SUBSCRIBE) y los payloads (los datos de temperatura/humedad), pero están totalmente cifrados.
+
+
 ### **6) Responder:**
 
 #### **a) ¿Sobre qué protocolos de capa de transporte están trabajando en esta actividad?**
@@ -133,4 +150,5 @@ Pub/Sub proporciona un marco para el intercambio de mensajes entre editores (com
 - Cisco Networking Academy. (2023). Introduction to Networks (Version 7.0) – Course Booklet. Cisco Press. (Disponible en: https://www.netacad.com/courses/ccna-introduction-networks)
 - [Patron Pub/Sub](https://ably.com/topic/pub-sub)
 - [MQTT](https://www.geeksforgeeks.org/computer-networks/introduction-of-message-queue-telemetry-transport-protocol-mqtt/)
+
 
