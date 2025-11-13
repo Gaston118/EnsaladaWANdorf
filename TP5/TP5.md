@@ -54,14 +54,34 @@ Pub/Sub proporciona un marco para el intercambio de mensajes entre editores (com
 
 ### **2) Instalar/desplegar y ejecutar un broker MQTT. Por ejemplo, en HiveMQ, tendremos un dashboard con parámetros de red para conectarnos:**
 
-### **3) Verificar que el broker funciona, suscribiendote con un cliente (pueden encontrar tutoriales para utilizar Java, python u otros lenguajes para este propósito)**
+<img width="1851" height="844" alt="image" src="https://github.com/user-attachments/assets/c00a79c4-65fb-4f97-bd7a-28cb6ee79bae" />
+
+### **3) Verificar que el broker funciona, suscribiendote con un cliente**
+
+<img width="1859" height="913" alt="image" src="https://github.com/user-attachments/assets/634e8ec8-a265-4a9c-99fa-53aa35e5d8af" />
 
 ### **4) Una vez que tenemos nuestra arquitectura funcionando:**
 
 #### **a) Simular una comunicación directa entre dos nodos de una red local. Para ello crear dos clientes:**
  - Dispositivo A, que publica en lan/deviceA/status, Dispositivo B se suscribe a ese tópico y muestra los mensajes recibidos. Capturar y documentar resultados.
 
+<img width="812" height="533" alt="image" src="https://github.com/user-attachments/assets/659f56e8-1f99-4bcd-afc0-0836eba5f86f" />
+
+<img width="806" height="399" alt="image" src="https://github.com/user-attachments/assets/e9e498e5-bafc-4d62-81b1-b4b0cf353d94" />
+
+<img width="812" height="214" alt="image" src="https://github.com/user-attachments/assets/98749dd4-5d96-4484-99c1-38169d1703d0" />
+
 #### **b) Crear un tópico general lan/broadcast/#. Configurar al menos dos clientes para suscribirse a lan/broadcast/#. Desde un cliente “central”, publicar mensajes en lan/broadcast/all. Capturar y documentar resultados. Con esto simularemos broadcasting en esta pequeña LAN.**
+
+<img width="817" height="152" alt="image" src="https://github.com/user-attachments/assets/cf025e52-6a62-4190-a4c4-3aaec7155361" />
+
+<img width="817" height="152" alt="image" src="https://github.com/user-attachments/assets/241387a1-88bc-4bbb-af51-f600e32d71bf" />
+
+<img width="817" height="152" alt="image" src="https://github.com/user-attachments/assets/bfd12e82-bf81-4626-8c0d-45a9effa4a2b" />
+
+<img width="817" height="181" alt="image" src="https://github.com/user-attachments/assets/cdc0d87a-6e96-4191-9c4e-d16a3969feea" />
+
+<img width="817" height="181" alt="image" src="https://github.com/user-attachments/assets/aa1c362e-df50-4475-9219-f682a1400fc7" />
 
 ### **5) Implementar una jerarquía de tópicos como:**
 - lan/sala1/sensor/temp
@@ -70,7 +90,23 @@ Pub/Sub proporciona un marco para el intercambio de mensajes entre editores (com
   
 #### **a) Simular, en cada cliente, un sensor que genere datos (utiliza un generador de número aleatorios). Recolectar estos en una gateway/servidor suscrito a estos tópicos.**
 
-#### **b) Ahora nuestro cliente “central” (ahora gateway) se suscribirá y recopilará los datos generados por los sensores en archivos locales (texto, CSV, serializado, o si te animás, en una base de datos).**
+<img width="817" height="181" alt="image" src="https://github.com/user-attachments/assets/a71ead3a-d6b2-47f3-8670-f0b3b2ec339c" />
+
+<img width="805" height="128" alt="image" src="https://github.com/user-attachments/assets/6178b7c8-471e-4573-9176-a89754af3e29" />
+
+<img width="805" height="128" alt="image" src="https://github.com/user-attachments/assets/78953d71-016a-41d7-a827-c92238e61897" />
+
+<img width="805" height="128" alt="image" src="https://github.com/user-attachments/assets/a2d441bf-b336-4fef-b468-a31d1e59b027" />
+
+#### **b) Ahora nuestro cliente “central” (ahora gateway) se suscribirá y recopilará los datos generados por los sensores en archivos locales.**
+
+<img width="819" height="533" alt="image" src="https://github.com/user-attachments/assets/4378d44e-d1e1-4e4c-8536-f1442177277e" />
+
+<img width="819" height="533" alt="image" src="https://github.com/user-attachments/assets/3ce27ab4-b657-4d66-9a12-79e9c87f0b59" />
+
+<img width="819" height="533" alt="image" src="https://github.com/user-attachments/assets/70b79570-7dda-4baa-974e-8a2e6bf6c9c3" />
+
+<img width="819" height="533" alt="image" src="https://github.com/user-attachments/assets/77c60fc5-2c16-47ee-92f5-974bd34b7177" />
 
 #### **c) Opcional: si te animás, investigá como plotear los datos (usando, por ejemplo, Grafana).**
 
@@ -97,3 +133,4 @@ Pub/Sub proporciona un marco para el intercambio de mensajes entre editores (com
 - Cisco Networking Academy. (2023). Introduction to Networks (Version 7.0) – Course Booklet. Cisco Press. (Disponible en: https://www.netacad.com/courses/ccna-introduction-networks)
 - [Patron Pub/Sub](https://ably.com/topic/pub-sub)
 - [MQTT](https://www.geeksforgeeks.org/computer-networks/introduction-of-message-queue-telemetry-transport-protocol-mqtt/)
+
