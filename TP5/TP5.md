@@ -27,8 +27,14 @@
 - tomas.viberti@mi.unc.edu.ar
 
 ## **Resumen**
+En este trabajo práctico se implementó y analizó una arquitectura de comunicación basada en el protocolo MQTT, utilizando el modelo publish/subscribe para simular una red local de dispositivos IoT.
+Primero se estudiaron las características principales de MQTT, sus ventajas, desventajas y su diferencia frente al modelo cliente-servidor. Luego se instaló y configuró un broker MQTT, y se verificó su funcionamiento conectando distintos clientes.
+Se realizaron pruebas de comunicación creando dos dispositivos que intercambiaron mensajes mediante tópicos específicos, y posteriormente se implementó un mecanismo de “broadcast”. 
+Se capturaron paquetes con un sniffer y se analizaron aspectos de la arquitectura en términos de transporte, integridad, confidencialidad, disponibilidad, niveles de QoS, ventajas del modelo pub/sub y limitaciones de MQTT respecto a una LAN real.
 
 ## **Introducción**
+En el presente trabajo se exploró el funcionamiento del protocolo MQTT (Message Queuing Telemetry Transport) y su aplicación en una arquitectura de comunicación orientada a dispositivos IoT. MQTT se basa en el modelo publish/subscribe, el cual permite un intercambio de mensajes flexible y desacoplado entre múltiples clientes mediante un broker central.
+El objetivo principal fue comprender este modelo de comunicación, configurar un broker MQTT y simular una red local compuesta por varios dispositivos que publican y reciben información a través de tópicos jerárquicos.
 
 ## **Desarrollo**
 
@@ -131,24 +137,38 @@ Pub/Sub proporciona un marco para el intercambio de mensajes entre editores (com
    - Evidencia: Los paquetes etiquetados como "Application Data" son, en realidad, los comandos MQTT (PUBLISH, SUBSCRIBE) y los payloads (los datos de temperatura/humedad), pero están totalmente cifrados.
 
 
-### **6) Responder:**
+### **6)**
 
 #### **a) ¿Sobre qué protocolos de capa de transporte están trabajando en esta actividad?**
+- En esta actividad estamos trabajando principalmente sobre TCP, que es el protocolo de transporte utilizado por MQTT en sus implementaciones estándar.
 
 #### **b) ¿Qué pueden decir sobre la garantía de Integridad, Confidencialidad y Disponibilidad en esta arquitectura?**
+- **Integridad:** La integridad significa que los mensajes lleguen sin alterarse. MQTT garantiza: detección de errores por checksum, retransmisión si se pierde un paquete y reordenamiento de mensajes.
+- **Confidencialidad:** La confidencialidad es que nadie pueda leer tus mensajes. En HiveMQ con TLS, puerto 8883 el tráfico viaja cifrado.
+- **Disponibilidad:** La disponibilidad depende totalmente del broker, es un punto único de falla. Si se cae, la arquitectura deja de funcionar.
 
 #### **c) ¿Qué rol juegan los niveles de QoS en la fiabilidad de los mensajes?**
+- QoS 0: no garantiza integridad más allá de lo que ofrece TCP.
+- QoS 1: garantiza que el mensaje llega, pero puede llegar duplicado.
+- QoS 2: garantiza que llega una sola vez y sin duplicados.
 
 #### **d) ¿Qué ventajas ofrece el modelo pub/sub frente al modelo cliente-servidor?**
+- Desacoplamiento entre emisores y receptores.
+- Mejor escalabilidad, ideal para muchos dispositivos.
+- Comunicación asíncrona y más flexible.
+- Menor tráfico redundante, gracias a la distribución del broker.
 
 #### **e) ¿Qué limitaciones tiene MQTT respecto a una red LAN real?**
+MQTT no replica el comportamiento de una LAN real porque toda la comunicación depende de un broker central, no existe comunicación directa entre dispositivos, no aprovecha broadcast/multicast físico, no es eficiente para grandes volúmenes de datos y ofrece seguridad limitada si no se usa TLS. Además, abstrae completamente los protocolos reales de red, por lo que no refleja el funcionamiento real de una LAN.
 
 #### **f) ¿Qué implicaciones tiene depender de un broker central para la comunicación?**
+Depender de un broker central implica que la arquitectura tiene un punto único de falla, un punto único de congestión, más latencia y una fuerte dependencia de la configuración y seguridad del broker. Si el broker falla o es atacado, toda la comunicación se interrumpe.
 
 ## **Bibliografia**
 
 - Cisco Networking Academy. (2023). Introduction to Networks (Version 7.0) – Course Booklet. Cisco Press. (Disponible en: https://www.netacad.com/courses/ccna-introduction-networks)
 - [Patron Pub/Sub](https://ably.com/topic/pub-sub)
 - [MQTT](https://www.geeksforgeeks.org/computer-networks/introduction-of-message-queue-telemetry-transport-protocol-mqtt/)
+
 
 
