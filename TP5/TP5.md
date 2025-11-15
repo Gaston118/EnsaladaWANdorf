@@ -29,12 +29,12 @@
 ## **Resumen**
 En este trabajo práctico se implementó y analizó una arquitectura de comunicación basada en el protocolo MQTT, utilizando el modelo publish/subscribe para simular una red local de dispositivos IoT.
 Primero se estudiaron las características principales de MQTT, sus ventajas, desventajas y su diferencia frente al modelo cliente-servidor. Luego se instaló y configuró un broker MQTT, y se verificó su funcionamiento conectando distintos clientes.
-Se realizaron pruebas de comunicación creando dos dispositivos que intercambiaron mensajes mediante tópicos específicos, y posteriormente se implementó un mecanismo de “broadcast”. 
-Se capturaron paquetes con un sniffer y se analizaron aspectos de la arquitectura en términos de transporte, integridad, confidencialidad, disponibilidad, niveles de QoS, ventajas del modelo pub/sub y limitaciones de MQTT respecto a una LAN real.
+Se realizaron pruebas de comunicación creando dos dispositivos que intercambiaron mensajes, y posteriormente se implementó un mecanismo de “broadcast”. 
+Se capturaron paquetes con Wireshark y se analizaron aspectos de la arquitectura en términos de transporte, integridad, confidencialidad, disponibilidad, niveles de QoS, ventajas del modelo pub/sub y limitaciones de MQTT respecto a una LAN real.
 
 ## **Introducción**
 En el presente trabajo se exploró el funcionamiento del protocolo MQTT (Message Queuing Telemetry Transport) y su aplicación en una arquitectura de comunicación orientada a dispositivos IoT. MQTT se basa en el modelo publish/subscribe, el cual permite un intercambio de mensajes flexible y desacoplado entre múltiples clientes mediante un broker central.
-El objetivo principal fue comprender este modelo de comunicación, configurar un broker MQTT y simular una red local compuesta por varios dispositivos que publican y reciben información a través de tópicos jerárquicos.
+El objetivo principal fue comprender este modelo de comunicación, configurar un broker MQTT y simular una red local compuesta por varios dispositivos que publican y reciben información.
 
 ## **Desarrollo**
 
@@ -169,6 +169,7 @@ Depender de un broker central implica que la arquitectura tiene un punto único 
 - Cisco Networking Academy. (2023). Introduction to Networks (Version 7.0) – Course Booklet. Cisco Press. (Disponible en: https://www.netacad.com/courses/ccna-introduction-networks)
 - [Patron Pub/Sub](https://ably.com/topic/pub-sub)
 - [MQTT](https://www.geeksforgeeks.org/computer-networks/introduction-of-message-queue-telemetry-transport-protocol-mqtt/)
+
 
 
 
